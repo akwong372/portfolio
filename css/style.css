@@ -1,3 +1,5 @@
+a { cursor: pointer; }
+
 .topnav {
   background-color: #b0bec5;
   opacity: 0.9;
@@ -27,16 +29,6 @@
 
 .topnav .icon {
   display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {
-    display: none;
-  }
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
 }
 
 .bars-container {
@@ -72,6 +64,7 @@
   height: 100%;
   width: auto;
   display: block;
+  float:left;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -83,6 +76,81 @@ html {
   height: 100%;
 }
 
+.title {
+  font-family: "Noticia Text", serif;
+  margin-top: 120px;
+  text-align: center;
+  font-size: 60px;
+}
+
+.subtitle {
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 100px;
+  display: block;
+}
+
+.project-title {
+  font-family: "Patrick Hand", cursive;
+  font-size: 30px;
+  text-align: center;
+  display: block;
+}
+
+.about-text {
+  font-family: "Patrick Hand", cursive;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.about-pic {
+  float: left;
+  border-radius: 45%;
+  margin-right: 20px;
+}
+
+
+a img {
+  display: inline-block;
+  max-height:500px;
+  max-width: 900px;
+  width: 100%;
+  height: 100%;
+}
+
+.pic-and-text {
+  clear: both;
+  display: block;
+}
+
+.projects{
+  display:block;
+}
+
+.dev-icons{
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+i {
+  font-size:60px;
+}
+
+
+/* for mobile */
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+}
 @media screen and (max-width: 600px) {
   .topnav.responsive {
     position: fixed;
@@ -109,34 +177,6 @@ html {
   }
 }
 
-.title {
-  font-family: "Noticia Text", serif;
-  margin-top: 100px;
-  text-align: center;
-  font-size: 60px;
-}
-
-.subtitle {
-  font-family: "Patrick Hand", cursive;
-  font-size: 30px;
-  text-align: center;
-  margin-bottom: 100px;
-  display: block;
-}
-
-.about-text {
-  font-family: "Patrick Hand", cursive;
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 200px;
-}
-
-.about-pic {
-  float: left;
-  border-radius: 45%;
-  margin-right: 20px;
-}
-
 @media screen and (max-width: 600px) {
   .title {
     font-size: 50px;
@@ -151,8 +191,4 @@ html {
     width: 150px;
     height: auto;
   }
-}
-
-.pic-and-text {
-  clear: both;
 }
