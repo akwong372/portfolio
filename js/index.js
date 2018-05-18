@@ -19,6 +19,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       navBarButtons.projects,
       navBarButtons.contact
     ],
+
+    sectionList: [
+      navBarButtons.topSection,
+      navBarButtons.aboutSection,
+      navBarButtons.projectsSection,
+      navBarButtons.contactSection
+    ],
+
     showMenu: function() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav container-fluid") {
@@ -68,12 +76,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
   navBar.buttonList.forEach(function(button) {
     button.onclick = function() {
       let functionId = button.id + "SectionScroll";
-      for (var i = 0; i < navBar.buttonList.length; i++) {
-        navBar.buttonList[i].className = "";
-      }
       navBar[button.id + "SectionScroll"]();
-      button.className = "active";
     };
   });
   
+  navBar.sectionList.forEach(function(section, i) {
+    section.onmouseover = function() {
+      for (var k = 0; k < navBar.buttonList.length; k++) {
+        navBar.buttonList[k].className = "";
+      }
+      navBar.buttonList[i].className = "active";
+    }
+  });
 });
